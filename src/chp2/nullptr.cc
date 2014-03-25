@@ -3,6 +3,6 @@ using namespace std;
 
 int main()
 {
-  int *a = nullptr;
+  int *a = NULL;
   cout << *a << endl;
 }
