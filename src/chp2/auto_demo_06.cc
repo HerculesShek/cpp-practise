@@ -6,13 +6,9 @@ using namespace std;
 
 int main()
 {
-  int a = 42;
-  int &b = a;
+  Sales_item a, b;
+  auto au = a+b;
+  cout << typeid(au).name() <<endl;
   
-  const decltype(a) e = 99;
-  decltype(b) c = a, d = a;
-
-
-  cout << e << endl;
   return 0;
 }
