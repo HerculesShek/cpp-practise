@@ -4,12 +4,13 @@ using namespace std;
 
 int main()
 {
-  int a = 99;
-  int *const b = &a;
-  *b = 9999;
+  const int a = 52;
+  const auto pa = &a;
+  
+  *pa = 42;
+  pa = nullptr;
   cout << a << endl;
 
-  b = nullptr;
 
   return 0;
-}
+} 
