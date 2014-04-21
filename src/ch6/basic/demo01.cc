@@ -11,7 +11,7 @@ int fact(int val)
 
 int main()
 {
-  int res = fact(5);
+  int res = fact(5.8);
   cout << "5! is " << res << endl;
   
   return 0;
