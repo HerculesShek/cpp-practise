@@ -5,7 +5,10 @@ using std::istream; using std::ostream;
 #include <string>
 using std::string;
 
-struct Sales_data{
+class Sales_data{
+  friend Sales_data add(const Sales_data&, const Sales_data&);
+  friend std::ostream &print(std::ostream&, const Sales_data&);
+  friend std::istream &read(std::ostream&, Sales_data&);
 public:
   Sales_data() = default;
   Sales_data(const string &s):bookNo(s){}
@@ -17,23 +20,16 @@ public:
   Sales_data& combine(const Sales_data&);
 private:
   double avg_price() const
-  {if units_sold ? revenue / units_sold : 0;}
+  {return units_sold ? revenue / units_sold : 0;}
   string bookNo;
   unsigned units_sold = 0;
   double revenue = 0.0;
 };
 
+
 Sales_data add(const Sales_data&, const Sales_data&);
 std::ostream &print(std::ostream&, const Sales_data&);
 std::istream &read(std::ostream&, Sales_data&);
-
-double Sales_data::avg_price() const
-{
-  if(this->units_sold)
-	return revenue / units_sold;
-  else
-	return 0;
-}
 
 Sales_data& Sales_data::combine(const Sales_data &rhs)
 {
