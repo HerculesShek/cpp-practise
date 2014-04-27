@@ -7,11 +7,12 @@ using std::ostream; using std::istream;
 using std::string;
 
 class Screen{
+  friend class Window_mgr;
 public:
   typedef string::size_type pos;
   Screen() = default;
-  Screen(pos ht, pos wd, char c) :
-	height(ht), width(wd), contents(ht*wd, c){}
+  Screen(pos ht, pos wd, char c):
+    height(ht), width(wd), contents(ht*wd, c){}
   char get() const 
   {return contents[cursor]; } // implicitly inline 
   inline char get(pos ht, pos wd) const; // explicitly inline
