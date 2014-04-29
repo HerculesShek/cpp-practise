@@ -33,7 +33,7 @@ Sales_data add(const Sales_data &lhs, const Sales_data &rhs)
   return sum;
 }
 
-Sales_data::Sales_data(istream &is)
+explicit Sales_data::Sales_data(istream &is)
 {
   read(is, *this);
 }
@@ -42,7 +42,7 @@ int main()
 {
   Sales_data item("aaa");
   string is = "aaa";
-  item.combine(is);
+  // item.combine(is);
   print(cout, item);
   return 0;
 }
