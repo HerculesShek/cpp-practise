@@ -16,14 +16,11 @@ int main()
   authors.insert({"Alain de Botton", "A3"});
 
   string search_item("Alain de Botton"); // author we’ll look for
-  auto entries = authors.count(search_item); // number of elements
-  auto iter = authors.find(search_item); // first entry for this author
-  // loop through the number of entries there are for this author
-  while(entries) {
-	cout << iter->second << endl; // print each title
-	++iter; // advance to the next title
-	--entries; // keep track of how many we’ve printed
-  }
+
+  for (auto beg = authors.lower_bound(search_item),
+		 end = authors.upper_bound(search_item);
+	   beg != end; ++beg)
+	cout << beg->second << endl; // print each title
 
   return 0;
 }

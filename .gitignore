@@ -20,3 +20,6 @@
 
 
 /src/*/o/
+
+/src/ch11/operations/word_transformation/input
+/src/ch11/operations/word_transformation/word_map
