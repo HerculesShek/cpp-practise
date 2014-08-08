@@ -8,7 +8,7 @@ int main()
 {
 
   int i = 42, *p = &i, &r = i, x = 100;
-  decltype(r + 0) b; 
+  decltype(r + 0) b;
   decltype(*p) c = x;
   cout << c << endl;
 
