@@ -10,7 +10,10 @@ int main()
   int &b = a;
 
   const decltype(a) e = 99;
-  const decltype(b) c = a, d = a;
+  e = 42; // error! e is read only
+  decltype(b) c = a, d = a;
+
+  const decltype(b) m = a; // error
 
   cout << e << endl;
   cout << c << endl;
