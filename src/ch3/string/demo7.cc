@@ -10,6 +10,6 @@ int main(){
   string s("some thing");
   if(!s.empty())
 	s[0] = toupper(s[0]);
-  cout << s << endl;
+  print(s);
   return 0;
 } 

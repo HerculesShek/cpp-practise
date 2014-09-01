@@ -7,9 +7,13 @@ void print(const string &s){
 }
 
 int main(){
+    string a("aaaa");
+    cout << "ddddd, " + a << endl;
+
+    
   string line;
   while(getline(cin, line))
 	if(line.size()>20)
-	  cout << line << endl;
+    	print(line);
   return 0;
-} 
+}

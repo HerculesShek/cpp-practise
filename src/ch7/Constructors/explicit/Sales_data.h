@@ -1,6 +1,5 @@
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
-
 #include <iostream>
 using std::cout; using std::endl;using std::cin;
 using std::istream; using std::ostream;
@@ -16,8 +15,10 @@ public:
   Sales_data() = default;
   Sales_data(const string &s, unsigned n, double p):
 	bookNo(s), units_sold(n), revenue(p*n) {}
-  explicit Sales_data(const string &s):bookNo(s){}
-  explicit  Sales_data(istream &);
+  explicit Sales_data(const string &s):bookNo(s){
+        cout << "units_sold is " << units_sold << ", revenue is " << revenue << endl;
+    }
+  explicit Sales_data(istream &);
 
   string isbn() const {return bookNo; }
   Sales_data& combine(const Sales_data&);
