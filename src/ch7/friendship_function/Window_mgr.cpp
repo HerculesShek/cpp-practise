@@ -4,9 +4,9 @@ using namespace std;
 
 void Window_mgr::clear(ScreenIndex i){
     Screen &s = screens[i];
-    s.contents = string(s.height*s.width, '#');
+    s.contents = string(s.height*s.width, '$');
 }
 
 Window_mgr::Window_mgr(){
-    screens.push_back(Screen(3,3,'a'));
+    screens.push_back(Screen(5,3,'0'));
 }
