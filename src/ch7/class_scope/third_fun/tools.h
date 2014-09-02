@@ -1,2 +1,2 @@
 #include "quiz.h"
-int update(Quiz::pos);
+int update(Quiz::score);

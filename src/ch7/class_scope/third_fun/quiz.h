@@ -4,11 +4,12 @@
 
 class Quiz{
 public:
-    typedef std::vector<int>::size_type pos;
+    typedef unsigned score;
+    typedef std::vector<score>::size_type pos;
     void verify(pos i);
     Quiz();
-    int &show(pos i){return scores[i];}
+    score &show(pos i){return scores[i];}
 private:
-    std::vector<int> scores;
+    std::vector<score> scores;
 };
 #endif

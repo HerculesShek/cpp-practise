@@ -6,6 +6,6 @@ void Quiz::verify(pos i){
 }
 
 Quiz::Quiz(){
-    scores.push_back(50);
-    scores.push_back(120);
+    scores.push_back(50u);
+    scores.push_back(120u);
 }
