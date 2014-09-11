@@ -11,6 +11,7 @@ public:
     Screen &set(char);
     Screen &set(pos, pos, char);
     char get() const{return contents[cursor];}
+    
     inline char get(pos r, pos c) const;
     Screen &move(pos r, pos c);
     Screen &display(std::ostream &os);
