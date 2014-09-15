@@ -24,11 +24,9 @@ int main ()
   std::string::size_type noIntPos;
   std::string str("1234ert");
   int i = std::stoi(str, &noIntPos, 10);
-  std::cout << str << ": " << i << " " << noIntPos <<  " and [" << str.substr(noIntPos) << "]\n";
-
-
+  std::cout << str << ": " << i << ", index is " << noIntPos
+            << " and [" << str.substr(noIntPos) << "]\n";
   std::cout << stoi(std::string("222eee")) << std::endl;
-
-
+  std::cout << stoi(std::string("aaa222eee")) << std::endl;
   return 0;
-} 
+}
